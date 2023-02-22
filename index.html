@@ -11,15 +11,11 @@
 </head>
 <body>
 	<div style="text-align:center;">
-		<img src="https://media.discordapp.net/attachments/661918882340274218/1077950487342624848/karimod.png?width=772&height=1030" alt="Mon image" onclick="playAudio()" />
+		<a href="#" onclick="document.getElementById('myaudio').play(); return false;">
+			<img src="https://media.discordapp.net/attachments/661918882340274218/1077950487342624848/karimod.png?width=772&height=1030" alt="Mon image" style="cursor: pointer;" />
+		</a>
 		<h1>Salut</h1>
-		<audio id="audio" src="music.mp3"></audio>
-		<script>
-			function playAudio() {
-				var audio = document.getElementById("audio");
-				audio.play();
-			}
-		</script>
+		<audio id="myaudio" src="music.mp3" loop></audio>
 	</div>
 </body>
 </html>
