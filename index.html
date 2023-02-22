@@ -4,22 +4,22 @@
 	<title>Karimod</title>
 	<style>
 		body {
-			background-color: white;
-			transition: background-color 10s;
+			background-color: black;
+			color: white;
 		}
 	</style>
 </head>
 <body>
 	<div style="text-align:center;">
-		<img src="https://media.discordapp.net/attachments/661918882340274218/1077950487342624848/karimod.png?width=772&height=1030" alt="Mon image" />
+		<img src="https://media.discordapp.net/attachments/661918882340274218/1077950487342624848/karimod.png?width=772&height=1030" alt="Mon image" onclick="playAudio()" />
 		<h1>Salut</h1>
-		<audio src="audio.wav" autoplay loop></audio>
+		<audio id="audio" src="audio.wav"></audio>
+		<script>
+			function playAudio() {
+				var audio = document.getElementById("audio");
+				audio.play();
+			}
+		</script>
 	</div>
-	<script>
-		document.body.style.backgroundColor = 'black';
-		setTimeout(function() {
-			document.body.style.backgroundColor = 'white';
-		}, 5000);
-	</script>
 </body>
 </html>
