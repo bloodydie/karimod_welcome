@@ -5,7 +5,7 @@
 	<style>
 		body {
 			background-color: white;
-			transition: background-color 2s ease;
+			transition: background-color 10s;
 		}
 	</style>
 </head>
@@ -13,15 +13,13 @@
 	<div style="text-align:center;">
 		<img src="https://media.discordapp.net/attachments/661918882340274218/1077950487342624848/karimod.png?width=772&height=1030" alt="Mon image" />
 		<h1>Salut</h1>
-		<audio src="https://cdn.discordapp.com/attachments/661918882340274218/1077950835281109132/audio.wav" autoplay loop></audio>
+		<audio src="audio.wav" autoplay loop></audio>
 	</div>
 	<script>
-		var hue = 0;
-		var body = document.querySelector('body');
-		setInterval(function() {
-			hue = (hue + 1) % 360;
-			body.style.backgroundColor = 'hsl(' + hue + ', 100%, 50%)';
-		}, 50);
+		document.body.style.backgroundColor = 'black';
+		setTimeout(function() {
+			document.body.style.backgroundColor = 'white';
+		}, 5000);
 	</script>
 </body>
 </html>
