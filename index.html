@@ -2,12 +2,26 @@
 <html>
 <head>
 	<title>Karimod</title>
+	<style>
+		body {
+			background-color: #000;
+			transition: background-color 2s ease;
+		}
+	</style>
 </head>
 <body>
 	<div style="text-align:center;">
 		<img src="https://media.discordapp.net/attachments/661918882340274218/1077950487342624848/karimod.png?width=772&height=1030" alt="Mon image" />
 		<h1>Salut</h1>
-		<audio src="https://cdn.discordapp.com/attachments/661918882340274218/1077950835281109132/audio.wav" autoplay loop></audio>
+		<audio src="https://cdn.discordapp.com/attachments/661918882340274218/1077950835281109132/audio.wav" id="audio" loop></audio>
 	</div>
+	<script>
+		function changeBackground() {
+			let color = Math.floor(Math.random() * 16777215).toString(16);
+			document.body.style.backgroundColor = "#" + color;
+			setTimeout(changeBackground, 1000);
+		}
+		setTimeout(changeBackground, 1000);
+	</script>
 </body>
 </html>
